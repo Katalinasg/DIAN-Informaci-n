@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guia digital para tramite de inscripcion o actualizacion de RUT ante la DIAN. Requisitos por persona natural y juridica.">
+  <title>Guia Digital - Inscripcion o Actualizacion de RUT DIAN</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Tarjetas principales de Inscripcion / Actualizacion */
+    .main-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .main-card {
+      background: var(--card);
+      border-radius: var(--r-l);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-m);
+      overflow: hidden;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .main-card:hover { box-shadow: var(--shadow-l); transform: translateY(-3px); }
+    .main-card-head {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--dian-blue);
+      color: #fff;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .main-card-head:hover { background: var(--dian-blue-dark); }
+    .main-card-head.open { background: var(--dian-blue-dark); }
+    .mc-icon {
+      font-size: 2.2rem;
+      flex-shrink: 0;
+      width: 56px; height: 56px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,.18);
+      border-radius: var(--r-m);
+    }
+    .mc-name { font-size: 1.15rem; font-weight: 800; line-height: 1.25; }
+    .mc-cat  { font-size: .78rem; opacity: .8; margin-top: .15rem; }
+    .mc-toggle {
+      margin-left: auto;
+      font-size: 1rem;
+      transition: transform .25s;
+      flex-shrink: 0;
+    }
+    .main-card-head.open .mc-toggle { transform: rotate(180deg); }
+    .main-card-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+    }
+    .main-card-body.open { max-height: 3000px; transition: max-height .6s ease; }
+    .main-card-inner { padding: 1.25rem 1.5rem 1.5rem; }
+
+    .sub-card {
+      background: var(--bg);
+      border-radius: var(--r-m);
+      border-left: 4px solid var(--dian-blue);
+      padding: 1rem 1.15rem;
+      margin-bottom: .9rem;
+    }
+    .sub-card.juridica { border-left-color: var(--dian-gold); }
+    .sub-card-title {
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--dian-blue);
+      margin-bottom: .6rem;
+    }
+    .sub-card.juridica .sub-card-title { color: var(--dian-gold-dark); }
+    .sub-list { display: flex; flex-direction: column; gap: .4rem; }
+    .sub-it {
+      display: flex; align-items: flex-start; gap: .5rem;
+      font-size: .82rem; color: var(--text-b); line-height: 1.55;
+    }
+    .sub-it::before {
+      content: '\2022';
+      color: var(--dian-blue);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .sub-card.juridica .sub-it::before { color: var(--dian-gold-dark); }
+    .sub-notas {
+      margin-top: .6rem;
+      padding: .6rem .75rem;
+      background: var(--warn-bg);
+      border-left: 3px solid var(--warn);
+      border-radius: var(--r-s);
+      font-size: .76rem;
+      color: var(--text-b);
+      line-height: 1.55;
+    }
+    .sub-notas b { color: var(--warn); }
+    .ver-completa {
+      display: inline-flex; align-items: center; gap: .4rem;
+      margin-top: 1rem;
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--dian-blue);
+      text-decoration: none;
+    }
+    .ver-completa:hover { text-decoration: underline; }
+  </style>
+</head>
+<body data-page="index">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="header-brand">
+          <span class="header-badge">DIAN</span>
+          <div class="header-brand-text">
+            <span class="header-brand-name">Guia Digital RUT</span>
+            <span class="header-brand-sub">Inscripcion o Actualizacion</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="index-hero">
+    <div class="container">
+      <span class="hero-icon">📋</span>
+      <h1 class="hero-title">
+        Inscripcion o <span>Actualizacion de RUT</span>
+      </h1>
+      <p class="hero-sub">
+        Escanea el codigo QR del cartel, entra desde tu celular y revisa
+        los documentos que debes llevar segun si eres <b>persona natural</b>
+        o <b>persona juridica</b>.
+      </p>
+    </div>
+  </section>
+
+  <!-- TARJETAS PRINCIPALES -->
+  <section class="tramites-section">
+    <div class="container">
+      <div class="section-hdr">
+        <h2 class="section-title">Selecciona tu tramite</h2>
+        <p class="section-sub">Toca una tarjeta para ver los documentos segun tu tipo de persona</p>
+      </div>
+
+      <div class="main-cards">
+
+        <!-- ====== TARJETA 1: INSCRIPCION ====== -->
+        <article class="main-card">
+          <button class="main-card-head" type="button" onclick="toggleMainCard(this)">
+            <span class="mc-icon">📄</span>
+            <div>
+              <div class="mc-name">Inscripcion del RUT</div>
+              <div class="mc-cat">Por primera vez ante la DIAN</div>
+            </div>
+            <span class="mc-toggle">▼</span>
+          </button>
+          <div class="main-card-body">
+            <div class="main-card-inner">
+
+              <div class="sub-card">
+                <div class="sub-card-title">👤 Persona Natural</div>
+                <ul class="sub-list">
+                  <li class="sub-it">Fotocopia de la cedula y documento de identidad vigente</li>
+                </ul>
+                <div class="sub-notas">
+                  <b>Nota:</b> Verificar RUES. Si tiene o tuvo camara de comercio, debe colocarse como soporte.
+                </div>
+              </div>
+
+              <div class="sub-card juridica">
+                <div class="sub-card-title">🏢 Persona Juridica</div>
+                <ul class="sub-list">
+                  <li class="sub-it">Certificado de camara de comercio no mayor a 30 dias</li>
+                  <li class="sub-it">Fotocopia de la cedula del representante legal</li>
+                </ul>
+                <div class="sub-notas">
+                  <b>Nota (PR-CAC-0004):</b> Si por fallas tecnicas el servicio de inscripcion por
+                  camara no funciona, se genera el certificado de existencia y representacion legal
+                  con la leyenda "NIT debe ser tramitado ante la DIAN" y se realiza inscripcion
+                  asistida por servidor publico en la UAE-DIAN.
+                </div>
+              </div>
+
+              <a href="tramites/inscripcion-rut.html" class="ver-completa">Ver guia completa con todos los tipos de persona →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ====== TARJETA 2: ACTUALIZACION ====== -->
+        <article class="main-card">
+          <button class="main-card-head" type="button" onclick="toggleMainCard(this)">
+            <span class="mc-icon">✏️</span>
+            <div>
+              <div class="mc-name">Actualizacion del RUT</div>
+              <div class="mc-cat">Modificacion de datos</div>
+            </div>
+            <span class="mc-toggle">▼</span>
+          </button>
+          <div class="main-card-body">
+            <div class="main-card-inner">
+
+              <div class="sub-card">
+                <div class="sub-card-title">👤 Persona Natural</div>
+                <ul class="sub-list">
+                  <li class="sub-it">Fotocopia de la cedula, solo para los casos de actualizacion de datos de identificacion</li>
+                </ul>
+                <div class="sub-notas">
+                  <b>Nota:</b> Verificar RUES. Si tiene o tuvo camara de comercio, debe colocarse como soporte.
+                </div>
+              </div>
+
+              <div class="sub-card juridica">
+                <div class="sub-card-title">🏢 Persona Juridica</div>
+                <ul class="sub-list">
+                  <li class="sub-it">Certificado de camara de comercio no mayor a 30 dias</li>
+                  <li class="sub-it">Fotocopia de la cedula del representante legal</li>
+                </ul>
+              </div>
+
+              <a href="tramites/actualizacion-rut.html" class="ver-completa">Ver guia completa con todos los tipos de persona →</a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /main-cards -->
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="how-section">
+    <div class="container">
+      <h2 class="how-title">Como funciona</h2>
+      <div class="how-grid">
+        <div class="how-step">
+          <div class="how-num">1</div>
+          <div class="how-step-t">Escanea el QR</div>
+          <p class="how-step-p">Apunta la camara de tu celular al codigo QR del cartel ubicado en la oficina DIAN.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">2</div>
+          <div class="how-step-t">Selecciona tu tramite</div>
+          <p class="how-step-p">Toca "Inscripcion" o "Actualizacion" segun lo que vas a realizar.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">3</div>
+          <div class="how-step-t">Identifica tu tipo de persona</div>
+          <p class="how-step-p">Revisa los documentos para persona natural o persona juridica.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">4</div>
+          <div class="how-step-t">Llega preparado</div>
+          <p class="how-step-p">Reunelos originales y fotocopias y asiste a la DIAN listo para ser atendido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-t">DIAN</div>
+          <p style="font-size:.85rem;line-height:1.6;margin-bottom:.75rem;">
+            Direccion de Impuestos y Aduanas Nacionales de Colombia.
+            Herramienta informativa para ciudadanos.
+          </p>
+          <span class="bdg bdg-gold">Proyecto academico / piloto</span>
+        </div>
+        <div>
+          <div class="footer-t">Tramites</div>
+          <nav class="footer-links">
+            <a href="tramites/inscripcion-rut.html">Inscripcion del RUT</a>
+            <a href="tramites/actualizacion-rut.html">Actualizacion del RUT</a>
+            <a href="qr-impresion.html">Imprimir codigo QR para cartel</a>
+          </nav>
+        </div>
+        <div>
+          <div class="footer-t">Recursos DIAN</div>
+          <nav class="footer-links">
+            <a href="https://www.dian.gov.co" target="_blank" rel="noopener">Portal oficial DIAN</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Esta herramienta es informativa y no reemplaza el portal oficial de la DIAN &mdash; www.dian.gov.co</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMainCard(btn) {
+      var body = btn.nextElementSibling;
+      var open = btn.classList.contains('open');
+      if (open) {
+        btn.classList.remove('open');
+        body.classList.remove('open');
+      } else {
+        btn.classList.add('open');
+        body.classList.add('open');
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

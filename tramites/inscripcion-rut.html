@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Documentos necesarios para inscribirse en el RUT ante la DIAN. Por tipo de persona.">
+  <title>Inscripcion del RUT - Guia DIAN</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="tramite">
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="header-back">&#8592; Volver</a>
+        <a href="../index.html" class="header-brand">
+          <span class="header-badge">DIAN</span>
+          <div class="header-brand-text">
+            <span class="header-brand-name">Guia Digital RUT</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="tramite-hero">
+    <div class="container">
+      <div class="tramite-hero-inner">
+        <span class="th-icon">📄</span>
+        <div>
+          <span class="th-badge">&#128205; Inscripcion</span>
+          <h1 class="th-title">Inscripcion del RUT</h1>
+          <p class="th-desc">
+            Revisa los documentos que debes llevar para inscribirte por primera vez
+            en el Registro Unico Tributario, segun tu tipo de persona.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="tab-panels">
+    <div class="container">
+
+      <h2 style="font-size:1.3rem;font-weight:800;color:#0D2137;margin:1.5rem 0 .75rem;text-align:center;">
+        📄 Inscripcion
+      </h2>
+      <p style="text-align:center;color:#607D8B;font-size:.9rem;margin-bottom:1.5rem;">
+        Selecciona tu tipo de persona para ver los documentos que debes llevar.
+      </p>
+
+      <div class="acc-hint">
+        <span style="font-size:1.3rem;flex-shrink:0;">&#128073;</span>
+        <div>
+          <b>Busca tu tipo de persona y abre la tarjeta</b> para ver los documentos
+          de <b>inscripcion</b>. Las <b>notas</b> tambien aplican. Lleva los
+          <b>documentos originales</b> con fotocopia.
+        </div>
+      </div>
+
+      <div class="acc-controls">
+        <button class="acc-ctrl-btn" onclick="accExpandAll()">&#128194; Abrir todos</button>
+        <button class="acc-ctrl-btn" onclick="accCollapseAll()">&#128196; Cerrar todos</button>
+      </div>
+
+      <!-- 1. Personas Juridicas -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">🏢</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">1. Personas Juridicas</div>
+            <div class="acc-h-cat">Empresas y sociedades</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Certificado de camara de comercio no mayor a 30 dias</li>
+                <li class="acc-sg-it">Fotocopia de la cedula del representante legal</li>
+              </ul>
+            </div>
+            <div class="acc-notas">
+              <div class="acc-notas-title">&#9888; Notas</div>
+              <p class="acc-notas-text">
+                <b>PR-CAC-0004:</b> Si por fallas tecnicas el servicio de inscripcion por camara
+                no funciona, se genera el certificado de existencia y representacion legal con la
+                leyenda "NIT debe ser tramitado ante la DIAN" y se realiza inscripcion asistida
+                por servidor publico en la UAE-DIAN.
+              </p>
+              <p class="acc-notas-text">
+                Las Direcciones Seccionales deben informar a las camaras de comercio la relacion
+                de dichos NIT y razon social, con periodicidad semanal, el primer dia habil de
+                la siguiente semana (articulo 555-1 del Estatuto Tributario).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Persona Natural -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">👤</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">2. Persona Natural</div>
+            <div class="acc-h-cat">Ciudadano adulto</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Fotocopia de la cedula y documento de identidad vigente</li>
+              </ul>
+            </div>
+            <div class="acc-notas">
+              <div class="acc-notas-title">&#9888; Notas</div>
+              <p class="acc-notas-text">
+                Verificar RUES. Si tiene o tuvo camara de comercio, debe colocarse como soporte.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Persona Natural Menor de Edad -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">🧒</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">3. Persona Natural (Menor de Edad)</div>
+            <div class="acc-h-cat">Ninos y adolescentes</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Fotocopia de tarjeta de identidad (12 anos en adelante)</li>
+                <li class="acc-sg-it">Registro civil (menor de 12 anos)</li>
+                <li class="acc-sg-it">Cedula del padre o tutor</li>
+                <li class="acc-sg-it">Fotocopia del poder otorgado por el representante legal en el exterior, en espanol, apostillado (si el pais es miembro del Convenio de La Haya), extendido ante el Consulado o funcionario autorizado</li>
+              </ul>
+            </div>
+            <div class="acc-notas">
+              <div class="acc-notas-title">&#9888; Notas</div>
+              <p class="acc-notas-text">
+                El tramite podra realizarlo directamente el cliente cuando sea <b>menor adulto</b>
+                (entre 12 y 18 anos), presentando fotocopia del documento con exhibicion del original
+                (paragrafo articulo 53 Ley 1306 de 2009, articulo 3 Ley 1098 de 2006).
+              </p>
+              <p class="acc-notas-text">
+                Para los demas casos, el tramite lo realiza el <b>representante legal del menor</b>
+                con fotocopia del Registro Civil de Nacimiento y fotocopia del documento del
+                padre o madre, con exhibicion del original.
+              </p>
+              <p class="acc-notas-text">
+                Si la representacion la ejerce una <b>persona diferente a los padres</b>, se
+                requiere el documento que asigne esa representacion y fotocopia del documento del
+                guardador o curador (Ley 1306 de 2009), con exhibicion del original.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Sociedad Extranjera (Juridicas) -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">🌍</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">4. Sociedad Extranjera (Personas Juridicas)</div>
+            <div class="acc-h-cat">Inversionista extranjero con apoderado en Colombia</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Fotocopia del documento de identidad del apoderado del inversionista en Colombia, con exhibicion del original</li>
+                <li class="acc-sg-it">Todos los documentos deben presentarse en espanol; en caso contrario, traducidos por traductor oficial</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Sucesion Iliquida -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">🪦</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">5. Sucesion Iliquida</div>
+            <div class="acc-h-cat">Fallecidos - herederos</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Registro Civil de Defuncion del fallecido</li>
+                <li class="acc-sg-it">Fotocopia de cedula del fallecido</li>
+                <li class="acc-sg-it">Fotocopia de cedula del heredero designado como representante legal con administracion de bienes</li>
+                <li class="acc-sg-it">Carta autenticada de nombramiento de la sucesion, o escritura, o documento expedido por autoridad competente (juzgado o notaria). Debe incluir nota de herederos conocidos.</li>
+                <li class="acc-sg-it">Si realiza un tercero: poder otorgado por los herederos, autenticado en notaria</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Propiedad Horizontal No Comercial -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">🏘️</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">6. Propiedad Horizontal - No Uso Comercial</div>
+            <div class="acc-h-cat">Conjuntos residenciales sin actividad comercial</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Documento del ente que otorga la personeria juridica (Alcaldia, Gobernacion), no mayor a un mes (salvo vigencia superior). Si excede, documento que acredite que esta vigente</li>
+                <li class="acc-sg-it">Fotocopia de la cedula del representante legal</li>
+                <li class="acc-sg-it">Formato de ubicacion (direccion, correo, telefono; indicar que <b>no es para uso comercial</b>)</li>
+              </ul>
+            </div>
+            <div class="acc-notas">
+              <div class="acc-notas-title">&#9888; Notas</div>
+              <p class="acc-notas-text">
+                Si actua un apoderado, debe presentar el poder y fotocopia de su cedula.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Propiedad Horizontal Con Comercial -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">🏢</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">7. Propiedad Horizontal - Con Uso Comercial</div>
+            <div class="acc-h-cat">Conjuntos con actividad comercial</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Documento del ente que otorga la personeria juridica (Alcaldia, Gobernacion), no mayor a un mes (salvo vigencia superior). Si excede, documento que acredite que esta vigente</li>
+                <li class="acc-sg-it">Fotocopia de la cedula del representante legal</li>
+                <li class="acc-sg-it">Formato de ubicacion (direccion, correo, telefono; indicar uso comercial)</li>
+              </ul>
+            </div>
+            <div class="acc-notas">
+              <div class="acc-notas-title">&#9888; Notas</div>
+              <p class="acc-notas-text">
+                Consulta de direccion en Barranquilla:
+                <a href="https://appbaq.barranquilla.gov.co:9292/horizontal/propiedad/cns/faces/bsqDireccion.xhtml" target="_blank" rel="noopener">appbaq.barranquilla.gov.co</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Entidades Publicas -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">🏛️</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">8. Entidades Publicas</div>
+            <div class="acc-h-cat">Escuelas, hospitales, universidades, IES</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Resolucion de personeria juridica</li>
+                <li class="acc-sg-it">Acto administrativo de nombramiento del representante legal</li>
+                <li class="acc-sg-it">Acta de posesion del representante legal</li>
+                <li class="acc-sg-it">Fotocopia de cedula del representante legal</li>
+                <li class="acc-sg-it">Codigo institucional expedido por la Contaduria General de la Nacion</li>
+                <li class="acc-sg-it">Formato de ubicacion (direccion, correo, telefono, ciudad, departamento)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. Juntas de Accion Comunal / Consejos Comunitarios -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">🤝</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">9. Juntas de Accion Comunal / Consejos Comunitarios</div>
+            <div class="acc-h-cat">Comunidades negras, Afrocolombianas, Raizales y Palenqueras</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Documento del ente que otorga la personeria juridica (Alcaldia, Gobernacion, Ministerio), no mayor a un mes (salvo vigencia superior). Si excede, documento que acredite que este vigente</li>
+                <li class="acc-sg-it">Fotocopia de la cedula del representante legal</li>
+              </ul>
+            </div>
+            <div class="acc-notas">
+              <div class="acc-notas-title">&#9888; Notas</div>
+              <p class="acc-notas-text">
+                Si el acto o resolucion de nombramiento tiene fecha superior a 30 dias, se debe
+                solicitar certificado del ente de vigilancia reconociendo la personeria juridica
+                y la representacion.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. Asociaciones -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">📜</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">10. Asociaciones</div>
+            <div class="acc-h-cat">Asociaciones sin animo de lucro</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Documento del ente que otorga la personeria juridica (Alcaldia, Gobernacion, Ministerio), no mayor a un mes (salvo vigencia superior). Si excede, documento que acredite que este vigente</li>
+                <li class="acc-sg-it">Fotocopia de la cedula del representante legal</li>
+                <li class="acc-sg-it">Carta de informacion de ubicacion (direccion, celular y correo electronico)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11. Concejo Municipal -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">🏛️</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">11. Concejo Municipal</div>
+            <div class="acc-h-cat">Concejales elegidos popularmente</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title no-aplica">📄 Documentos para Inscripcion</div>
+              <span class="acc-sg-na">Sin documentos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12. Consorcios o Uniones Temporales -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">🤝</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">12. Consorcios o Uniones Temporales</div>
+            <div class="acc-h-cat">Consorcios para licitaciones / contratos</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Copia del documento de constitucion del consorcio o union temporal, que debe contener: <b>nombre del consorcio</b>, nombres/apellidos o razon social, domicilio principal, participacion %, correos electronicos, representante legal de quienes conforman el consorcio, objeto del consorcio y vigencia (fecha de inicio y terminacion)</li>
+                <li class="acc-sg-it">Copia del acta de adjudicacion de la licitacion o contrato, o carta de aceptacion de la oferta, o el documento que haga sus veces; resolucion emitida por ente publico</li>
+                <li class="acc-sg-it">Copia del documento de identidad del representante legal</li>
+              </ul>
+            </div>
+            <div class="acc-notas">
+              <div class="acc-notas-title">&#9888; Notas</div>
+              <p class="acc-notas-text">
+                <b>Si es con poder no mayor a 6 meses:</b> poder original / poder general.
+                Si es <b>mayor a 6 meses</b>, deben traer un certificado de la notaria en el
+                que conste que el poder esta vigente.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 13. Hogar Comunitario ICBF -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">🍼</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">13. Hogar Comunitario (ICBF)</div>
+            <div class="acc-h-cat">Hogares y guarderias ICBF</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Resolucion de personeria juridica</li>
+                <li class="acc-sg-it">Fotocopia de la cedula del representante legal</li>
+                <li class="acc-sg-it">Certificacion de ubicacion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14. Club Deportivo -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">⚽</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">14. Club Deportivo</div>
+            <div class="acc-h-cat">Clubes y ligas deportivas</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Resolucion de personeria juridica</li>
+                <li class="acc-sg-it">Fotocopia de la cedula del representante legal</li>
+                <li class="acc-sg-it">Certificacion de ubicacion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 15. Personeria Municipal -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">🏛️</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">15. Personeria Municipal</div>
+            <div class="acc-h-cat">Personero municipal</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Certificado de la Contaduria General de la Nacion / codigo entidades agregadas</li>
+                <li class="acc-sg-it">Fotocopia de la cedula del personero (representante legal)</li>
+                <li class="acc-sg-it">Copia del acta de posesion</li>
+                <li class="acc-sg-it">Resolucion de personeria juridica</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 16. Fundaciones -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">💚</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">16. Fundaciones</div>
+            <div class="acc-h-cat">Fundaciones sin animo de lucro</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Resolucion de personeria juridica</li>
+                <li class="acc-sg-it">Fotocopia de la cedula del representante legal</li>
+                <li class="acc-sg-it">Certificacion de ubicacion</li>
+              </ul>
+            </div>
+            <div class="acc-notas">
+              <div class="acc-notas-title">&#9888; Notas</div>
+              <p class="acc-notas-text">
+                Si tiene camara de comercio solo se pide el certificado y la fotocopia de cedula
+                del representante legal o presidente.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 17. Iglesias -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">⛪</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">17. Iglesias</div>
+            <div class="acc-h-cat">Entidades religiosas</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Resolucion de personeria juridica (si es mayor de 30 dias, pedir certificado de vigencia)</li>
+                <li class="acc-sg-it">Fotocopia de la cedula del representante legal</li>
+                <li class="acc-sg-it">Certificacion de ubicacion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 18. Unidad Prestadora de Salud / Policia Nacional -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">🏥</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">18. Unidad Prestadora de Salud, Policia Nacional</div>
+            <div class="acc-h-cat">Instituciones de salud y seguridad</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Certificado de la Contaduria General de la Nacion / codigo entidades agregadas</li>
+                <li class="acc-sg-it">Fotocopia de la cedula del representante legal</li>
+                <li class="acc-sg-it">Copia del acta de posesion (depende)</li>
+                <li class="acc-sg-it">Resolucion de personeria juridica</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 19. Sindicatos -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">✊</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">19. Sindicatos</div>
+            <div class="acc-h-cat">Organizaciones sindicales</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title">📄 Documentos para Inscripcion</div>
+              <ul class="acc-sg-list">
+                <li class="acc-sg-it">Constancia de registro expedido por el Ministerio de Trabajo, menor a 30 dias</li>
+                <li class="acc-sg-it">Fotocopia de cedula del presidente</li>
+                <li class="acc-sg-it">Certificacion de ubicacion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 20. Sociedad Extranjera -->
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span class="acc-h-icon">🌐</span>
+          <div class="acc-h-info">
+            <div class="acc-h-name">20. Sociedad Extranjera</div>
+            <div class="acc-h-cat">Inversion extranjera directa</div>
+          </div>
+          <span class="acc-h-toggle">&#9660;</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-sgroup">
+              <div class="acc-sg-title no-aplica">📄 Documentos para Inscripcion</div>
+              <span class="acc-sg-na">Sin documentos</span>
+            </div>
+            <div class="acc-notas">
+              <div class="acc-notas-title">&#9888; Notas</div>
+              <p class="acc-notas-text">
+                Directorio de traductores oficiales (Cancilleria):
+                <a href="https://tramites.cancilleria.gov.co/ciudadano/directorio/traductores/traductores.aspx" target="_blank" rel="noopener">tramites.cancilleria.gov.co</a>
+              </p>
+              <p class="acc-notas-text">
+                Convenio de La Haya (apostilla) - Estados miembros:
+                <a href="https://www.hcch.net/es/states/hcch-members" target="_blank" rel="noopener">hcch.net</a>
+              </p>
+              <p class="acc-notas-text">
+                Todas las inversiones extranjeras con direccion en el RUT en el extranjero son
+                <b>responsables de IVA</b>, a menos que ejecuten una actividad no gravada
+                (Estatuto Tributario articulo 420 literal C).
+              </p>
+              <p class="acc-notas-text">
+                Cancelacion: 1865. Solo reportan el <b>RUB</b> (articulo 4 Resolucion 164)
+                cuando invierten directamente y no estan inscritos en una sociedad juridica colombiana.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

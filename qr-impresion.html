@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imprimir Codigo QR - Tramites DIAN</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ---- Estilos del cartel imprimible ---- */
+    .poster-wrap {
+      max-width: 560px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 20px;
+      border: 2px solid #CFD8DC;
+      box-shadow: 0 8px 32px rgba(0,59,142,.12);
+      overflow: hidden;
+    }
+    .poster-top {
+      background: #003B8E;
+      color: #fff;
+      padding: 1.75rem 2rem 1.5rem;
+      text-align: center;
+    }
+    .poster-top h1 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: .3rem;
+    }
+    .poster-top p {
+      font-size: .9rem;
+      opacity: .88;
+    }
+    .poster-qr-area {
+      padding: 2rem;
+      text-align: center;
+    }
+    .poster-qr-box {
+      display: inline-block;
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 16px;
+      border: 3px solid #003B8E;
+      box-shadow: 0 4px 20px rgba(0,59,142,.15);
+      margin-bottom: 1.25rem;
+    }
+    .poster-qr-box canvas,
+    .poster-qr-box img { display: block; border-radius: 8px; }
+    .poster-scan-txt {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #003B8E;
+      margin-bottom: .3rem;
+    }
+    .poster-scan-sub {
+      font-size: .85rem;
+      color: #607D8B;
+      margin-bottom: 1rem;
+    }
+    .poster-url {
+      font-size: .7rem;
+      color: #90A4AE;
+      word-break: break-all;
+      font-family: monospace;
+      background: #EEF2F7;
+      padding: .5rem .75rem;
+      border-radius: 8px;
+      display: inline-block;
+      max-width: 90%;
+    }
+    .poster-steps {
+      background: #EEF2F7;
+      padding: 1.25rem 2rem;
+      border-top: 1px solid #CFD8DC;
+    }
+    .poster-steps-title {
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: #607D8B;
+      margin-bottom: .75rem;
+    }
+    .poster-step-list {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .poster-step {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: .875rem;
+      color: #37474F;
+    }
+    .poster-step-num {
+      width: 26px; height: 26px; flex-shrink: 0;
+      background: #003B8E; color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .75rem; font-weight: 800;
+    }
+    .poster-footer {
+      background: #003B8E;
+      color: rgba(255,255,255,.7);
+      text-align: center;
+      padding: .75rem;
+      font-size: .72rem;
+    }
+    /* Botones de accion (no se imprimen) */
+    .action-bar {
+      max-width: 560px;
+      margin: 0 auto 2rem;
+      display: flex;
+      gap: .75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    @media print {
+      .site-header, .print-hero-bar, .action-bar { display: none !important; }
+      body { background: #fff !important; margin: 0; }
+      .poster-wrap {
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+      }
+      .poster-qr-box { border: 2px solid #003B8E !important; }
+    }
+  </style>
+</head>
+<body data-page="print">
+
+  <!-- HEADER (no imprime) -->
+  <header class="site-header print-hero-bar">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="header-back">&#8592; Volver al inicio</a>
+        <a href="index.html" class="header-brand">
+          <span class="header-badge">DIAN</span>
+          <div class="header-brand-text">
+            <span class="header-brand-name">Guia de Tramites</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BARRA DE ACCIONES (no imprime) -->
+  <div style="background:#fff;border-bottom:1px solid #CFD8DC;padding:1.25rem 0;" class="print-hero-bar">
+    <div style="text-align:center;">
+      <p style="font-size:.9rem;color:#607D8B;margin-bottom:1rem;">
+        Este es el cartel listo para imprimir y ubicar en la oficina DIAN.
+      </p>
+      <div class="action-bar">
+        <button class="btn-print" onclick="window.print()" style="
+          background:#003B8E;color:#fff;padding:.75rem 1.75rem;border-radius:50px;
+          font-weight:700;font-size:.95rem;border:none;cursor:pointer;
+          display:inline-flex;align-items:center;gap:.5rem;">
+          &#128438; Imprimir cartel
+        </button>
+        <a href="index.html" style="
+          background:#EEF2F7;color:#003B8E;padding:.75rem 1.75rem;border-radius:50px;
+          font-weight:700;font-size:.95rem;border:2px solid #003B8E;
+          display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;">
+          &#8592; Volver
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARTEL IMPRIMIBLE -->
+  <div style="padding:1.5rem 1rem 3rem;">
+    <div class="poster-wrap">
+
+      <!-- Encabezado azul -->
+      <div class="poster-top">
+        <div style="font-size:2.5rem;margin-bottom:.5rem;">&#128203;</div>
+        <h1>Guia Digital RUT DIAN</h1>
+        <p>Inscripcion o actualizacion de RUT<br>Consulta los documentos que debes llevar segun tu tipo de persona</p>
+      </div>
+
+      <!-- Zona QR -->
+      <div class="poster-qr-area">
+        <div class="poster-qr-box">
+          <div id="main-print-qr"
+               style="min-width:260px;min-height:260px;display:flex;align-items:center;justify-content:center;">
+            <span style="color:#90A4AE;font-size:.9rem;">Generando QR...</span>
+          </div>
+        </div>
+
+        <p class="poster-scan-txt">&#128247; Escanea con la camara de tu celular</p>
+        <p class="poster-scan-sub">Sin descargar ninguna aplicacion</p>
+        <div class="poster-url" id="main-print-qr-url">Cargando enlace...</div>
+      </div>
+
+      <!-- Pasos rapidos -->
+      <div class="poster-steps">
+        <div class="poster-steps-title">&#128161; Como usarlo</div>
+        <div class="poster-step-list">
+          <div class="poster-step">
+            <span class="poster-step-num">1</span>
+            <span>Apunta la camara al codigo QR</span>
+          </div>
+          <div class="poster-step">
+            <span class="poster-step-num">2</span>
+            <span>Toca la notificacion que aparece para abrir el sitio</span>
+          </div>
+          <div class="poster-step">
+            <span class="poster-step-num">3</span>
+            <span>Selecciona el tramite que necesitas realizar</span>
+          </div>
+          <div class="poster-step">
+            <span class="poster-step-num">4</span>
+            <span>Lee los requisitos y documentos necesarios</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tramite disponible -->
+      <div style="padding:1rem 2rem;border-top:1px solid #CFD8DC;">
+        <div class="poster-steps-title">Tramite disponible en la plataforma</div>
+        <div style="display:flex;flex-direction:column;gap:.4rem;">
+          <span style="font-size:.82rem;color:#37474F;">&#128196; <b>Inscripcion o Actualizacion de RUT</b> &mdash; Persona natural y juridica</span>
+          <span style="font-size:.78rem;color:#607D8B;">Documentos por tipo de persona &bull; Notas y recomendaciones &bull; Inscripcion y actualizacion</span>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="poster-footer">
+        Herramienta informativa &bull; Portal oficial: www.dian.gov.co
+      </div>
+
+    </div><!-- /poster-wrap -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
